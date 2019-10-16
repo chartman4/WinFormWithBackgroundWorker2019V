@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace WinFormWithBackgroundWorker
     //put together from Microsoft Walk Through :)
     //https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation
+    //correct code at https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.backgroundworker?view=netframework-4.8
 {
     public partial class FibonacciCalculator : Form
     {
@@ -20,7 +21,23 @@ namespace WinFormWithBackgroundWorker
         public FibonacciCalculator()
         {
             InitializeComponent();
+            InitializeBackgroundWorker();
+
         }
+        // Set up the BackgroundWorker object by 
+        // attaching event handlers. 
+        private void InitializeBackgroundWorker()
+        {
+            backgroundWorker1.DoWork +=
+                new DoWorkEventHandler(backgroundWorker1_DoWork);
+            backgroundWorker1.RunWorkerCompleted +=
+                new RunWorkerCompletedEventHandler(
+            backgroundWorker1_RunWorkerCompleted);
+            backgroundWorker1.ProgressChanged +=
+                new ProgressChangedEventHandler(
+            backgroundWorker1_ProgressChanged);
+        }
+
         // This is the method that does the actual work. For this
         // example, it computes a Fibonacci number and
         // reports progress as it does its work.
@@ -163,6 +180,16 @@ namespace WinFormWithBackgroundWorker
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FibonacciCalculator_Load(object sender, EventArgs e)
         {
 
         }

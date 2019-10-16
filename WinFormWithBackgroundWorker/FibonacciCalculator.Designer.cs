@@ -39,7 +39,8 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(298, 55);
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(164, 52);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             91,
             0,
@@ -51,7 +52,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(141, 39);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -62,7 +63,7 @@
             // 
             // startAsyncButton
             // 
-            this.startAsyncButton.Location = new System.Drawing.Point(160, 108);
+            this.startAsyncButton.Location = new System.Drawing.Point(164, 179);
             this.startAsyncButton.Name = "startAsyncButton";
             this.startAsyncButton.Size = new System.Drawing.Size(176, 40);
             this.startAsyncButton.TabIndex = 1;
@@ -73,7 +74,7 @@
             // cancelAsyncButton
             // 
             this.cancelAsyncButton.Enabled = false;
-            this.cancelAsyncButton.Location = new System.Drawing.Point(391, 108);
+            this.cancelAsyncButton.Location = new System.Drawing.Point(392, 179);
             this.cancelAsyncButton.Name = "cancelAsyncButton";
             this.cancelAsyncButton.Size = new System.Drawing.Size(174, 40);
             this.cancelAsyncButton.TabIndex = 2;
@@ -83,19 +84,21 @@
             // 
             // resultLabel
             // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(160, 186);
+            this.resultLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.resultLabel.Location = new System.Drawing.Point(325, 54);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(51, 20);
+            this.resultLabel.Size = new System.Drawing.Size(339, 35);
             this.resultLabel.TabIndex = 3;
-            this.resultLabel.Text = "label1";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(164, 234);
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.progressBar1.Location = new System.Drawing.Point(164, 107);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(500, 35);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 4;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // backgroundWorker1
             // 
@@ -117,9 +120,9 @@
             this.Controls.Add(this.numericUpDown1);
             this.Name = "FibonacciCalculator";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FibonacciCalculator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
