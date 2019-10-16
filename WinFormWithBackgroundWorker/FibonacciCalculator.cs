@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinFormWithBackgroundWorker
-    //put together from Microsoft Walk Through 
+    //put together from Microsoft Walk Through :(
     //https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation
 {
     public partial class FibonacciCalculator : Form
@@ -159,6 +159,11 @@ namespace WinFormWithBackgroundWorker
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             this.progressBar1.Value = e.ProgressPercentage;
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
