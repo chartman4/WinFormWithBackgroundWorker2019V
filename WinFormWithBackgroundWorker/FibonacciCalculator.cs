@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinFormWithBackgroundWorker
-    //put together from Microsoft Walk Through :(
+    //put together from Microsoft Walk Through :)
     //https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation
 {
     public partial class FibonacciCalculator : Form
